@@ -10,8 +10,8 @@ function apisistemi($hizmet, $token, $ciktituru, $resim = false)
     curl_setopt_array($oturum, [
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_CUSTOMREQUEST => 'GET',
-        CURLOPT_SSL_VERIFYHOST => false,
-        CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_SSL_VERIFYHOST => false, //Localhost
+        CURLOPT_SSL_VERIFYPEER => false, //Localhost
         CURLOPT_POSTFIELDS => json_encode($deger)
     ]);
     $cikti = curl_exec($oturum);
